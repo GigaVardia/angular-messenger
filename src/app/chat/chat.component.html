@@ -1,5 +1,9 @@
-<div class="h-full flex grow flex-col justify-items-stratch justify-between">
-  <app-chat-header></app-chat-header>
-  <app-chat-messages class="grow"></app-chat-messages>
-  <app-chat-input></app-chat-input>
+<div class="h-full flex">
+  <div class="h-full flex grow flex-col justify-items-stratch justify-between">
+    <app-chat-header
+      (onMenuBtnClickEvent)="onMenuBtnClickEvent.emit()"
+    ></app-chat-header>
+    <app-chat-messages class="grow"></app-chat-messages>
+    <app-chat-input></app-chat-input>
+  </div>
 </div>

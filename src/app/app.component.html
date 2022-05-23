@@ -1,6 +1,14 @@
-<main>
-  <div class="container flex basis-full">
-    <app-sidebar-left></app-sidebar-left>
-    <app-chat class="grow"></app-chat>
-  </div>
-</main>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" position="end">
+    <app-chat-details></app-chat-details>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="h-full flex basis-full">
+      <app-sidebar-left></app-sidebar-left>
+      <div class="d-flex flex-col grow">
+        <app-chat (onMenuBtnClickEvent)="sidenav.toggle()"></app-chat>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
